@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C028A2C228A40AE9006E40AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C028A2C128A40AE9006E40AB /* AppDelegate.swift */; };
 		C028A2C428A40AE9006E40AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C028A2C328A40AE9006E40AB /* SceneDelegate.swift */; };
-		C028A2C628A40AE9006E40AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C028A2C528A40AE9006E40AB /* ViewController.swift */; };
+		C028A2C628A40AE9006E40AB /* HumanRectanglesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C028A2C528A40AE9006E40AB /* HumanRectanglesViewController.swift */; };
 		C028A2C928A40AE9006E40AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C028A2C728A40AE9006E40AB /* Main.storyboard */; };
 		C028A2CB28A40AEB006E40AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C028A2CA28A40AEB006E40AB /* Assets.xcassets */; };
 		C028A2CE28A40AEB006E40AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C028A2CC28A40AEB006E40AB /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		C028A2BE28A40AE9006E40AB /* dx-arvr-poc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dx-arvr-poc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C028A2C128A40AE9006E40AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C028A2C328A40AE9006E40AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C028A2C528A40AE9006E40AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C028A2C528A40AE9006E40AB /* HumanRectanglesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanRectanglesViewController.swift; sourceTree = "<group>"; };
 		C028A2C828A40AE9006E40AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C028A2CA28A40AEB006E40AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C028A2CD28A40AEB006E40AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,39 @@
 		C028A2C028A40AE9006E40AB /* dx-arvr-poc */ = {
 			isa = PBXGroup;
 			children = (
+				C028A2D528A40D04006E40AB /* modules */,
 				C028A2C128A40AE9006E40AB /* AppDelegate.swift */,
 				C028A2C328A40AE9006E40AB /* SceneDelegate.swift */,
-				C028A2C528A40AE9006E40AB /* ViewController.swift */,
 				C028A2C728A40AE9006E40AB /* Main.storyboard */,
 				C028A2CA28A40AEB006E40AB /* Assets.xcassets */,
 				C028A2CC28A40AEB006E40AB /* LaunchScreen.storyboard */,
 				C028A2CF28A40AEB006E40AB /* Info.plist */,
 			);
 			path = "dx-arvr-poc";
+			sourceTree = "<group>";
+		};
+		C028A2D528A40D04006E40AB /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				C028A2D628A40D09006E40AB /* humanRectangles */,
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
+		C028A2D628A40D09006E40AB /* humanRectangles */ = {
+			isa = PBXGroup;
+			children = (
+				C028A2D728A40D1E006E40AB /* View */,
+			);
+			path = humanRectangles;
+			sourceTree = "<group>";
+		};
+		C028A2D728A40D1E006E40AB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C028A2C528A40AE9006E40AB /* HumanRectanglesViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C028A2C628A40AE9006E40AB /* ViewController.swift in Sources */,
+				C028A2C628A40AE9006E40AB /* HumanRectanglesViewController.swift in Sources */,
 				C028A2C228A40AE9006E40AB /* AppDelegate.swift in Sources */,
 				C028A2C428A40AE9006E40AB /* SceneDelegate.swift in Sources */,
 			);
@@ -290,6 +314,7 @@
 				DEVELOPMENT_TEAM = C6X9F6SQ34;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "dx-arvr-poc/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -318,6 +343,7 @@
 				DEVELOPMENT_TEAM = C6X9F6SQ34;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "dx-arvr-poc/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
